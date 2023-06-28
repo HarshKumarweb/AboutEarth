@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Explore Earth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f00;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #666;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #f00;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: disc;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        #contact ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #contact ul li {
+            margin-bottom: 5px;
+        }
+
+        #contact ul li:before {
+            content: "\2022";
+            color: #f00;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .earth-photos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .earth-photos img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Earth</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#facts">Facts</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Earth</h2>
+            <p>Earth is the third planet from the Sun and the only known astronomical object to harbor life. According to radiometric dating and other evidence, Earth formed over 4.5 billion years ago. It is primarily composed of silicate rock and metal in its interior and is covered with a thin layer of water, the hydrosphere, which supports and sustains life.</p>
+            <p>Earth's atmosphere primarily consists of nitrogen and oxygen and protects life on the planet by absorbing ultraviolet solar radiation and reducing temperature extremes between day and night. The planet's magnetic field interacts with the solar wind, a stream of charged particles emitted by the Sun, to create the Van Allen radiation belts and the auroras.</p>
+            <p>Earth's surface is divided into several rigid tectonic plates that gradually migrate across the planet over millions of years. The planet's outer shell is divided into several rigid tectonic plates that gradually migrate across the surface over geologic time scales. As a result, earthquakes, volcanic activity, mountain-building, and oceanic trench formation occur along these plate boundaries.</p>
+        </section>
+        <section id="facts">
+            <h2>Interesting Facts</h2>
+            <ul>
+                <li>Earth is the only known planet to support life.</li>
+                <li>Earth has a natural satellite called the Moon.</li>
+                <li>Earth is approximately 4.5 billion years old.</li>
+                <li>Earth's diameter is about 12,742 kilometers (7,918 miles).</li>
+                <li>The highest point on Earth is Mount Everest, reaching a height of 8,848 meters (29,029 feet) above sea level.</li>
+                <li>The lowest point on Earth is the Mariana Trench in the Western Pacific Ocean, reaching a depth of about 10,928 meters (35,856 feet) below sea level.</li>
+                <li>Earth's rotation causes day and night, with one complete rotation taking approximately 24 hours.</li>
+                <li>Earth orbits around the Sun, completing one revolution in about 365.25 days, resulting in a leap year every four years.</li>
+            </ul>
+        </section>
+        <section id="photos">
+            <h2>Photos of Earth</h2>
+            <div class="earth-photos">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV09RP2r2HNKOW1QUKlym8yVZTlOGx_YNMnA&usqp=CAU" alt="Earth Photo 1">
+                <img src="gamer.jpg" alt="Earth Photo 2">
+                <img src="earth_photo_3.jpg" alt="Earth Photo 3">
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, please feel free to reach out to us:</p>
+            <ul>
+                <li>Email: harshkum704@gmail.com</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        // Function to handle smooth scrolling for navigation links
+        function smoothScroll(target) {
+            const targetElement = document.querySelector(target);
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+            });
+        }
+
+        // Event listeners for navigation links
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                const targetId = event.target.getAttribute("href");
+                smoothScroll(targetId);
+            });
+        });
+    </script>
+</body>
+</html>
